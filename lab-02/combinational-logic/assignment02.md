@@ -6,15 +6,15 @@
 
    Greater than:
 
-   ![K-maps](images/kmap_empty.png)
+   ![K-maps](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/lab-02/Greater.png)
 
    Less than:
 
-   ![K-maps](images/kmap_empty.png)
+   ![K-maps](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/lab-02/lesser.png)
 
 2. Equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
+   ![Logic functions](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/lab-02/equations.png)
 
 ### 4-bit comparator
 
@@ -52,7 +52,7 @@
 
 2. Text console screenshot during your simulation, including reports.
 
-   ![your figure]()
+   ![your figure](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/lab-02/Report.png)
 
 3. Link to your public EDA Playground example:
 
