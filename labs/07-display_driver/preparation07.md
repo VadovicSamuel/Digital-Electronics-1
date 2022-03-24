@@ -25,4 +25,5 @@ head:
   text: '                    4ms   4ms   4ms   4ms   4ms   4ms   4ms   4ms   4ms   4ms',
 },
 }
-![waveforms]()
+```
+![waveforms](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/labs/07-display_driver/displaydriverprep.png)
