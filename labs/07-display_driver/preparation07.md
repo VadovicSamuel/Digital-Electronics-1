@@ -27,3 +27,8 @@ head:
 }
 ```
 ![waveforms](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/labs/07-display_driver/displaydriverprep.png)
+
+
+   
+   
+
