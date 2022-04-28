@@ -105,7 +105,7 @@ Application of 7bit d flip-flop.
   >2. with char_i converts bin_i to 7bit 7-segment ready signal, which is saved into 7bit shift register
  
   
-[Link to bin_7seg.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/hex_7seg.vhd)
+[Link to bin_7seg.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/bin_7seg.vhd)
 ### shift_register.vhd
   >1. stores the dots and dashed obtained in decoder
   >2. shift register is composed of 5 d_ff_rst
