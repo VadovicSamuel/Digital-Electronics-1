@@ -20,10 +20,10 @@
 
 ## Project objectives
 
-Our project objective is to recieve and convert a morse code signal and represent it on 7-segment display embedded to Nexys-A7-50T circuit board. <br>
+Our project objective is a conversion of morse code signal to decimal numbers and alphabet letters. Representation will be executed on 7-segment display embedded to Nexys-A7-50T circuit board. <br>
 
-By recieving a morse signal either through Arduino microcontroller or switch embedded on Nexys-A7-50T board we desire to count the lenght of impulse
-and then assume the represented morse code character. 
+By recieving a morse signal either through Arduino microcontroller or switch located on Nexys-A7-50T board we desire to count the lenght of impulse
+and then sampling these respective lenghts of signal into dots and dashes, which will undergo further procedure of decoding. 
 ![Objective](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/Project-Images/ObjectiveIMG1.png)
 
 
