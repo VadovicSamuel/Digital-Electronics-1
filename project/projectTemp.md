@@ -55,32 +55,30 @@ a USB connection, a power jack, an ICSP header and a reset button.
 ## VHDL modules description and simulations
 
 ### clock_enable.vhd
+S_cnt_local represents internal counter which is incrementing every rising edge of the clk clock signal. <br> When s_cnt_local reaches the value of g_MAX, output becomes enabled and s_cnt_local is reset.
  > 1. generates clock signal pulses
  > 2. enables clock signal by counting rising edges
- > 3. outputs the clock enable signal
- > 4. resets the local counter
-  
+ > 3. outputs the clock enable signal <br>
+
+
+
 [Link to clock_enable.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/clock_enable.vhd)
 ### counter.vhd 
 >  1. counts the clock enable impulses
 >  2. if counter signal exceedes the limit of numbers it can process, it resets the overflow output
->  3.
->  4.
+>  3. counter is reset through central reset or sychronous reset from decoder module
+>  4. s_LED indicates when s_cnt_local is incremented
   
 [Link to counter.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/counter.vhd)
 ### d_ff_rst.vhd
-  >1. prevents reset if input is held for too long 
-  >2. after longer period of time, while input is still being pressed, writes input into output
-  >3.
-  >4.
+  >1. d flip-flop with synchronous reset  
+  >2. if counter output overflow signal and input signal is low, d_ff_rst resets output 
+ 
   
   
 [Link to d_ff_rst.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/d_ff_rst.vhd)
 ### d_ff_rst7bit.vhd
-  >1. switches 7-segment display off
-  >2. after longer period of time, while input is still being pressed, writes input into output
-  >3.
-  >4.
+Application of 7bit d flip-flop.
   
 [Link to d_ff_rst7bit.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/d_ff_rst7bit.vhd)
 ### decoder.vhd
@@ -92,84 +90,31 @@ a USB connection, a power jack, an ICSP header and a reset button.
 [Link to decoder.vhd](https://github.com/VadhovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/decoder.vhd)
 ### display control.vhd
   >1. assigns characters their display positions
-  >2.
-  >3.
-  >4.
+  >2. Internal 3bit counter bin_cnt1 decides which display is to be turned on and assigns respective data to each display.
+  
   
 [display_control.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/display_control.vhd)
 ### edge detector.vhd
-  >1. changes input from low to high or high to low 
-  >2. 
-  >3.
-  >4.
-  <br>
-[Link to edge_detector.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/edge_detector.vhd)
-### hex_7seg.vhd
-  >1. assigns decoder output and {}{}{}{}{} their respected characters from alphabet or decimal numbers
-  >2. as every character has its specific set of on and off segments, this module proceeds to display it on 7-segment display
-  >3. 
-  >4.
+  >1. detects rising and falling edge of input signal
+  >2. output is generated when the input signal changes state
+ 
   
-[Link to hex_7seg.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/hex_7seg.vhd)
+[Link to edge_detector.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/edge_detector.vhd)
+### bin_7seg.vhd
+  >1. char_i represents the number of dots and dashes
+  >2. with char_i converts bin_i to 7bit 7-segment ready signal, which is saved into 7bit shift register
+ 
+  
+[Link to bin_7seg.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/hex_7seg.vhd)
 ### shift_register.vhd
   >1. stores the dots and dashed obtained in decoder
-  >2. 
-  >3.
-  >4.
+  >2. shift register is composed of 5 d_ff_rst
+
   
 [Link to shift_register.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/shift_register.vhd)
-### shift_register7bit.vhd**************
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to shift_register7bit.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/shift_register7bit.vhd)
-### TB1
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-### TB2
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-### TB3
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-### TB4
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-### TB5
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-### TB6
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-
-
-
+### shift_register7bit.vhd
+  >1. stores 7-segment ready signal for each display
+  >2. shift register is composed of 8 7bit d_ff_rst 
 
 <a name="top"></a>
 
@@ -180,16 +125,12 @@ a USB connection, a power jack, an ICSP header and a reset button.
 
 [Link to top.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/top.vhd)
 ### TB_top.vhd
-  >1. 
-  >2.
-  >3.
-  >4.
-  
-[Link to .vhd]()
-
+In tb_top we simulate morse code  ("-.. ."), character output is ("d E")  
+[Link to tb_top.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/Project-Images/tb_top.vhd) <br>
+[Link to simulation](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/Project-Images/image.png)<br>
+[Link to schematic](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/Project-Images/schema.png)
 
 <a name="video"></a>
-![schematic]()
 ## Video
 
 napisat co chceme vo videu hlavne spomenut
