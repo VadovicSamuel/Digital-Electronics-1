@@ -87,7 +87,7 @@ Application of 7bit d flip-flop.
   >3. if counter output is more than 3, decoder sets its output to '1', which is represented as dash
   >4. after recieving counter output higher than 7, decoder resets and determines the number of characters recievied, which are then conveyed to its output
   
-[Link to decoder.vhd](https://github.com/VadhovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/decoder.vhd)
+[Link to decoder.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/decoder.vhd)
 ### display control.vhd
   >1. assigns characters their display positions
   >2. Internal 3bit counter bin_cnt1 decides which display is to be turned on and assigns respective data to each display.
