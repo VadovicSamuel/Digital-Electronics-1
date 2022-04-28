@@ -55,77 +55,118 @@ a USB connection, a power jack, an ICSP header and a reset button.
 ## VHDL modules description and simulations
 
 ### clock_enable.vhd
-  1. generates clock signal pulses
-  2. enables clock signal by counting rising edges
-  3. outputs the clock enable signal
-  4. resets the local counter
+ > 1. generates clock signal pulses
+ > 2. enables clock signal by counting rising edges
+ > 3. outputs the clock enable signal
+ > 4. resets the local counter
   
 [Link to clock_enable.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/clock_enable.vhd)
 ### counter.vhd 
-  1. counts the clock enable impulses
-  2. if counter signal exceedes the limit of numbers it can process, it resets the overflow output
-  3.
-  4.
+>  1. counts the clock enable impulses
+>  2. if counter signal exceedes the limit of numbers it can process, it resets the overflow output
+>  3.
+>  4.
   
 [Link to counter.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/counter.vhd)
 ### d_ff_rst.vhd
-  1. prevents reset if input is held for too long 
-  2. after longer period of time, while input is still being pressed, writes input into output
-  3.
-  3.
-  4.
+  >1. prevents reset if input is held for too long 
+  >2. after longer period of time, while input is still being pressed, writes input into output
+  >3.
+  >4.
+  
   
 [Link to d_ff_rst.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/d_ff_rst.vhd)
 ### d_ff_rst7bit.vhd
-  1. switches 7-segment display off
-  2. after longer period of time, while input is still being pressed, writes input into output
-  3.
-  4.
+  >1. switches 7-segment display off
+  >2. after longer period of time, while input is still being pressed, writes input into output
+  >3.
+  >4.
   
 [Link to d_ff_rst7bit.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/d_ff_rst7bit.vhd)
 ### decoder.vhd
-  1. takes the lenght of counter output 
-  2. if counter output is less than 3, decoder sets its output to '0', which is represented as dot
-  3. if counter output is more than 3, decoder sets its output to '1', which is represented as dash
-  4. after recieving counter output higher than 7, decoder resets and determines the number of characters recievied, which are then conveyed to its output
+  >1. takes the lenght of counter output 
+  >2. if counter output is less than 3, decoder sets its output to '0', which is represented as dot
+  >3. if counter output is more than 3, decoder sets its output to '1', which is represented as dash
+  >4. after recieving counter output higher than 7, decoder resets and determines the number of characters recievied, which are then conveyed to its output
   
 [Link to decoder.vhd](https://github.com/VadhovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/decoder.vhd)
 ### display control.vhd
-  1. assigns characters their display positions
-  2.
-  3.
-  4.
+  >1. assigns characters their display positions
+  >2.
+  >3.
+  >4.
   
 [display_control.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/display_control.vhd)
 ### edge detector.vhd
-  1. changes input from low to high or high to low 
-  2. 
-  3.
-  4.
+  >1. changes input from low to high or high to low 
+  >2. 
+  >3.
+  >4.
   <br>
 [Link to edge_detector.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/edge_detector.vhd)
 ### hex_7seg.vhd
-  1. assigns decoder output and {}{}{}{}{} their respected characters from alphabet or decimal numbers
-  2. as every character has its specific set of on and off segments, this module proceeds to display it on 7-segment display
-  3. 
-  4.
+  >1. assigns decoder output and {}{}{}{}{} their respected characters from alphabet or decimal numbers
+  >2. as every character has its specific set of on and off segments, this module proceeds to display it on 7-segment display
+  >3. 
+  >4.
   
 [Link to hex_7seg.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/hex_7seg.vhd)
 ### shift_register.vhd
-  1. stores the dots and dashed obtained in decoder
-  2. 
-  3.
-  4.
+  >1. stores the dots and dashed obtained in decoder
+  >2. 
+  >3.
+  >4.
   
 [Link to shift_register.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/shift_register.vhd)
-### shift_register7bit.vhd
-  1. 
-  2.
-  3.
-  4.
+### shift_register7bit.vhd**************
+  >1. 
+  >2.
+  >3.
+  >4.
   
 [Link to shift_register7bit.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/shift_register7bit.vhd)
-
+### TB1
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
+### TB2
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
+### TB3
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
+### TB4
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
+### TB5
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
+### TB6
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
 
 
 
@@ -136,13 +177,22 @@ a USB connection, a power jack, an ICSP header and a reset button.
 
 ### top.vhd
 
+
 [Link to top.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/top.vhd)
+### TB_top.vhd
+  >1. 
+  >2.
+  >3.
+  >4.
+  
+[Link to .vhd]()
+
 
 <a name="video"></a>
-
+![schematic]()
 ## Video
 
-Write your text here
+napisat co chceme vo videu hlavne spomenut
 
 <a name="references"></a>
 
