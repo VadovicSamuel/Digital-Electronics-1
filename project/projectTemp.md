@@ -115,7 +115,9 @@ Application of 7bit d flip-flop.
 ### shift_register7bit.vhd
   >1. stores 7-segment ready signal for each display
   >2. shift register is composed of 8 7bit d_ff_rst 
-
+ 
+ 
+[Link to shift_register7bit.vhd](https://github.com/VadovicSamuel/Digital-Electronics-1/blob/main/ProjectDS/shift_register7bit.vhd)
 <a name="top"></a>
 
 ## TOP module description and simulations
@@ -133,11 +135,13 @@ In tb_top we simulate morse code  ("-.. ."), character output is ("d E")
 <a name="video"></a>
 ## Video
 
-napisat co chceme vo videu hlavne spomenut
+
 
 <a name="references"></a>
 
 ## References
 
-1. Write your text here.
+1. [Arduino uno](https://www.arduino.cc/en/main/arduinoBoardUno)
+2. [Nexys-A7-50T](https://www.xilinx.com/products/boards-and-kits/1-zywan9.html)
+3. [Github doc. Ing. Tomáš Frýza Phd.](https://github.com/tomas-fryza/digital-electronics-1)
 
